@@ -1,0 +1,5 @@
+
+net gotozero        halui.mdi-command-00        left_tab.hb_goto_zero
+net xzero           halui.mdi-command-01        left_tab.hb_x0
+net yzero           halui.mdi-command-02        left_tab.hb_y0
+net zzero           halui.mdi-command-03        left_tab.hb_z0
