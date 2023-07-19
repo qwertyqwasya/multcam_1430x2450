@@ -50,15 +50,15 @@ net ystep           => parport.0.pin-04-out
 setp parport.0.pin-04-out-reset 1
 net ydir            => parport.0.pin-05-out
 
-net y2step          => parport.0.pin-06-out
+net y2step          => parport.0.pin-08-out
 setp parport.0.pin-08-out-reset 1
 setp parport.0.pin-09-out-invert 1
-net y2dir           => parport.0.pin-07-out
+net y2dir           => parport.0.pin-09-out
 
-net zstep           => parport.0.pin-08-out
+net zstep           => parport.0.pin-06-out
 setp parport.0.pin-06-out-reset 1
 setp parport.0.pin-07-out-invert 1
-net zdir            => parport.0.pin-09-out
+net zdir            => parport.0.pin-07-out
 
 setp parport.0.pin-14-out-invert 1
 net spindle-on      => parport.0.pin-14-out
@@ -97,7 +97,7 @@ net ydir <= stepgen.1.dir
 net yenable joint.1.amp-enable-out => stepgen.1.enable
 net home-xyz => joint.1.home-sw-in
 
-setp stepgen.2.position-scale [JOINT_1]SCALE
+setp stepgen.2.position-scale [JOINT_2]SCALE
 setp stepgen.2.steplen 1
 setp stepgen.2.stepspace 0
 setp stepgen.2.dirhold 55000
@@ -110,12 +110,12 @@ net y2dir <= stepgen.2.dir
 net y2enable joint.2.amp-enable-out => stepgen.2.enable
 net home-y2 => joint.2.home-sw-in
 
-setp stepgen.3.position-scale [JOINT_2]SCALE
+setp stepgen.3.position-scale [JOINT_3]SCALE
 setp stepgen.3.steplen 1
 setp stepgen.3.stepspace 0
 setp stepgen.3.dirhold 55000
 setp stepgen.3.dirsetup 55000
-setp stepgen.3.maxaccel [JOINT_2]STEPGEN_MAXACCEL
+setp stepgen.3.maxaccel [JOINT_3]STEPGEN_MAXACCEL
 net zpos-cmd joint.3.motor-pos-cmd => stepgen.3.position-cmd
 net zpos-fb stepgen.3.position-fb => joint.3.motor-pos-fb
 net zstep <= stepgen.3.step
