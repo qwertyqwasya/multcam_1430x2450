@@ -18,9 +18,9 @@ Outputs:
 Inputs:
 
 10 - probe
-11 - home-xyz
-12 - home-y2
-13
+11 - home-xz
+12 - home-y1
+13 - home-y2
 15 - estop
 
 ВНИМАНИЕ!!!!!
