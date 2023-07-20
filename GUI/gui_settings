@@ -1,0 +1,2 @@
+root_window.attributes('-zoomed', 1)
+commands.set_view_z()
